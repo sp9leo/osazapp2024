@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "autoname": "field:uuid",
+ "creation": "2024-07-28 12:01:02.713468",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "uuid",
+  "status",
+  "column_break_exrv",
+  "link_ucenec"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "uuid",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "UUID",
+   "non_negative": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_exrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Aktiven=V uporabi, Neaktiven=izgubljen, uni\u010den ipd..",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "RFID status",
+   "options": "Pripravljen\nAktiven\nNeaktiven"
+  },
+  {
+   "fieldname": "link_ucenec",
+   "fieldtype": "Link",
+   "options": "Ucenec"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-11 08:47:22.698829",
+ "modified_by": "Administrator",
+ "module": "prehrana",
+ "name": "RFID",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Pripravljen"
+  },
+  {
+   "color": "Green",
+   "title": "Aktiven"
+  },
+  {
+   "color": "Gray",
+   "title": "Neaktiven"
+  }
+ ],
+ "title_field": "uuid"
+}
