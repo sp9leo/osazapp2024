@@ -124,6 +124,7 @@
    "fieldtype": "Data",
    "label": "Saop_ID",
    "no_copy": 1,
+   "permlevel": 1,
    "unique": 1
   }
  ],
@@ -142,7 +143,7 @@
    "link_fieldname": "ucenec"
   }
  ],
- "modified": "2024-09-24 09:26:06.659356",
+ "modified": "2024-09-24 09:52:50.538329",
  "modified_by": "Administrator",
  "module": "Prehrana",
  "name": "Ucenci",
