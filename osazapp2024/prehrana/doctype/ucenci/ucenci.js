@@ -65,6 +65,7 @@ frappe.ui.form.on("Ucenci", {
   }
 });
 
+
 // frappe.ui.form.on("Ucenci", {
 //   validate: function(frm) {
 //     const ucenec = frm.doc.name;

@@ -12,9 +12,7 @@ fixtures = [
     {"dt": "Workspace", "filters": [["name", "in", ["Prehrana_workspace-Administrator"]]]},
      "Role Profile",
     {
-        "doctype": "Role",
-        "filters": [
-            ["name", "in", ["Starsi", "Prehrana"]]
+        "doctype": "Role", "filters": [["name", "in", ["Starsi", "Prehrana"]]
         ]
     }
 ]
