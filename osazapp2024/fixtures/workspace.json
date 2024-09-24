@@ -1,7 +1,7 @@
 [
  {
   "charts": [],
-  "content": "[{\"id\":\"WpPdyhq1fN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Prehrana_workspace</span>\",\"col\":12}},{\"id\":\"ozeyM7t3IV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ucenec\",\"col\":3}},{\"id\":\"UCUfnEx5NK\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"rfid\",\"col\":3}},{\"id\":\"pJlXFvJg69\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"prehrana\",\"col\":3}}]",
+  "content": "[{\"id\":\"WpPdyhq1fN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Prehrana_workspace</span>\",\"col\":12}},{\"id\":\"99jRqggWZ4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Učenci\",\"col\":3}},{\"id\":\"YKmoOzJj4t\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Prehrana\",\"col\":3}},{\"id\":\"gm8HzzRRn0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"RFID\",\"col\":3}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -12,7 +12,7 @@
   "is_hidden": 0,
   "label": "Prehrana_workspace-Administrator",
   "links": [],
-  "modified": "2024-09-24 09:43:10.762657",
+  "modified": "2024-09-24 11:10:04.723789",
   "module": "Prehrana",
   "name": "Prehrana_workspace-Administrator",
   "number_cards": [],
@@ -23,6 +23,22 @@
   "roles": [],
   "sequence_id": 2.0,
   "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Učenci",
+    "link_to": "Ucenci",
+    "parent": "Prehrana_workspace-Administrator",
+    "parentfield": "shortcuts",
+    "parenttype": "Workspace",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
    {
     "color": "Grey",
     "doc_view": "List",
@@ -47,22 +63,6 @@
     "kanban_board": null,
     "label": "RFID",
     "link_to": "RFID",
-    "parent": "Prehrana_workspace-Administrator",
-    "parentfield": "shortcuts",
-    "parenttype": "Workspace",
-    "restrict_to_domain": null,
-    "stats_filter": "[]",
-    "type": "DocType",
-    "url": null
-   },
-   {
-    "color": "Grey",
-    "doc_view": "List",
-    "format": null,
-    "icon": null,
-    "kanban_board": null,
-    "label": "Učenci",
-    "link_to": "Ucenci",
     "parent": "Prehrana_workspace-Administrator",
     "parentfield": "shortcuts",
     "parenttype": "Workspace",
