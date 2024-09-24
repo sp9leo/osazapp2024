@@ -8,6 +8,9 @@ app_license = "mit"
 
 # Includes in <head>
 # ------------------
+fixtures = [
+    {"dt": "Workspace", "filters": [["name", "in", ["Prehrana_workspace-Administrator"]]]}
+]
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/osazapp2024/css/osazapp2024.css"

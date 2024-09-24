@@ -39,7 +39,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Ucenec",
-   "options": "Ucenec"
+   "options": "Ucenec_AP"
   },
   {
    "fieldname": "column_break_dxbj",
@@ -60,9 +60,9 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-06 15:29:07.736589",
+ "modified": "2024-09-15 15:21:48.896804",
  "modified_by": "Administrator",
- "module": "prehrana",
+ "module": "Prehrana",
  "name": "Prehrana",
  "owner": "Administrator",
  "permissions": [

@@ -8,8 +8,134 @@
 //         if status_change:
 //         console.log("status"+status_change);
 //             // pass
+//             if (doc.ucenec_link) {
+//                 frm.set_value('status', 'Aktiven');
+//                             }
 //                 }
 //     });
+
+frappe.ui.form.on('RFID', {
+    before_save: function(frm) {
+        // Check if the link field is empty
+        const ucenec=frm.doc.link_ucenec
+        console.log(ucenec)
+        if (!frm.doc.link_ucenec) {
+            // Call the server-side function to update the related field
+            frappe.call({
+                method: 'frappe.client.set_value',
+                args: {
+                    doctype: 'Ucenci',
+                    name: ucenec,
+                    fieldname: 'rfid',
+                    value: null
+                },
+                callback: function(response) {
+                    if (!response.exc) {
+                        frappe.show_alert('Related field updated successfully');
+                    }
+                }
+            });
+        }
+    }
+});
+
+
+
+
+frappe.ui.form.on("RFID", {
+    izbrisi_rfid(frm) {
+        const ucenec = frm.doc.link_ucenec;
+        var rfid = frm.doc.name;
+        console.log(ucenec);
+        frappe.db.get_value('Ucenci', {name: ucenec}, ['ime', 'priimek'])
+                    .then(r => {
+                        let values = r.message;
+                        console.log(values.ime, values.priimek);
+                        var ucenecname = values.ime+' '+values.priimek;
+                    // });
+        
+        
+
+        frappe.warn(`Are you sure you want to proceed?`, `Osebi ${ucenecname} bo odstranjen RFID z UUID ${rfid}`,
+            () => {
+                // action to perform if Yes is selected
+                
+                frappe.call({
+                    method: 'frappe.client.set_value',
+                    args: {
+                        doctype: 'Ucenci',
+                        name: ucenec,
+                        fieldname: 'rfid',
+                        value: null
+                    },
+                    callback: function(response) {
+                        if (!response.exc) {
+                            frappe.show_alert(`${ucenec} updated successfully`);
+                            frm.set_value('status', 'Pripravljen');
+                            frm.set_value('link_ucenec', null);
+                            frm.save();
+                            // doc.reload();
+                        }
+                    }
+                });
+            }, 
+            'Nadaljuj'
+            // () => {
+            //     action to perform if No is selected
+            // }
+           
+        );
+    });
+        
+        
+        
+        // frappe.prompt(
+        //     {
+        //         label: "Delete RFID",
+        //         fieldname: "ucenec",
+        //         fieldtype: "Link",
+        //         options: "Ucenci", // Replace with the actual doctype name
+        //         reqd: 1,
+        //         primary_action_label: 'Potrdi', // Make it required (optional)
+        //         get_query: function() {
+        //             return {
+        //                 filters: {
+        //                     // status: "Pripravljen",
+        //                     name: ucenec
+        //                 }
+        //             };
+        //         },
+        //     },
+        //     values => {
+        //         const selectedRfid = values.ucenec;
+        //         console.log(`Selected RFID: ${selectedRfid}`);
+                
+        //         frappe.db.get_doc("Ucenci", selectedRfid).then(doc => {
+        //             console.log("doc"+doc);
+        //             console.log("ucenec"+ucenec);
+        //             doc.status = "Pripravljen";
+        //             doc.link_ucenec = ucenec;
+
+        //             // Use frappe.call to update the document
+        //             // frappe.call({
+        //             //     method: 'frappe.client.set_value',
+        //             //     args: {
+        //             //         doctype: 'Ucenci',
+        //             //         name: ucenec,
+        //             //         fieldname: 'rfid',
+        //             //         value: null
+        //             //     },
+        //             //     callback: function(response) {
+        //             //         if (!response.exc) {
+        //             //             frappe.msgprint('Related field updated successfully');
+        //             //         }
+        //             //     }
+        //             // });
+        //         });
+        //     }
+        // );
+    }
+});
 
 
 // frappe.ui.form.on("RFID", {
@@ -32,8 +158,8 @@
 // frappe.ui.form.on("RFID", {
 //   validate(frm) {
 
-//     if (frm.doc.ucenec =""){
-//         frappe.db.get_doc("Ucenec", null, {rfid:frm.doc.name});
+//     if (frm.doc.link_ucenec =""){
+//         frappe.db.get_doc("Ucenci", null, {rfid:frm.doc.name});
 //         console.log("this one gets deleted");
 
 //     }
@@ -49,13 +175,13 @@
 //         console.log(value); // This is a fulfilled promise 👈
 //         console.log()
 //         console.log(value.rfid)
-//         frappe.db.set_value("Ucenec", frm.doc.ucenec, "rfid", frm.doc.name)
+//         frappe.db.set_value("Ucenci", frm.doc.link_ucenec, "rfid", frm.doc.name)
 //     }).catch((err) => {
 //         console.error(err);
 
 //     });
 
-//     // property.rfid = frm.doc.name;
+//     //property.rfid = frm.doc.name;
 
 //     // Save the updated property data (e.g., via an API call)
 //     // ...
@@ -87,7 +213,7 @@
 //     //   console.log("no student");
 //     // }
 // }
-// const propertyId = frappe.db.get_doc("Ucenec", frm.doc.ucenec, { rfid: frm.doc.rfid }); // Replace with the actual property ID
+// const propertyId = frappe.db.get_doc("Ucenci", frm.doc.link_ucenec, { rfid: frm.doc.rfid }); // Replace with the actual property ID
 // updatePropertyStatus(propertyId);
 
 // }
@@ -124,3 +250,5 @@
 // // Example usage:
 // const propertyId = 'your_property_id_here'; // Replace with the actual property ID
 // createPayment(propertyId);
+
+

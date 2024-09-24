@@ -8,7 +8,8 @@
   "uuid",
   "status",
   "column_break_exrv",
-  "link_ucenec"
+  "link_ucenec",
+  "izbrisi_rfid"
  ],
  "fields": [
   {
@@ -36,14 +37,28 @@
   {
    "fieldname": "link_ucenec",
    "fieldtype": "Link",
-   "options": "Ucenec"
+   "label": "U\u010denec",
+   "options": "Ucenci",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "depends_on": "eval: doc.link_ucenec != null;",
+   "fieldname": "izbrisi_rfid",
+   "fieldtype": "Button",
+   "label": "Odstrani RFID"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-09-11 08:47:22.698829",
+ "links": [
+  {
+   "link_doctype": "Ucenci",
+   "link_fieldname": "rfid"
+  }
+ ],
+ "modified": "2024-09-15 17:46:09.319205",
  "modified_by": "Administrator",
- "module": "prehrana",
+ "module": "Prehrana",
  "name": "RFID",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
@@ -78,5 +93,6 @@
    "title": "Neaktiven"
   }
  ],
- "title_field": "uuid"
+ "title_field": "uuid",
+ "track_changes": 1
 }

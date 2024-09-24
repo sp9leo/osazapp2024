@@ -7,15 +7,15 @@
 // 	},
 // });
 
-frappe.ui.form.on("Ucenec", "onload", function(frm){
-    frm.set_query("starsi", function(){
-        return {
-            filters: {
-                "ignore_user_type": 1
-            }
-        }
-    });
-});
+// frappe.ui.form.on("Ucenci", "onload", function(frm){
+//     frm.set_query("starsi", function(){
+//         return {
+//             filters: {
+//                 "ignore_user_type": 1
+//             }
+//         }
+//     });
+// });
 
 // TO_DO
 
@@ -83,11 +83,11 @@ frappe.ui.form.on("Ucenec", "onload", function(frm){
 // });
 
 
-// frm.add_custom_button("Izberi RFID", () => {
+frm.add_custom_button("Izberi RFID", () => {
            
-// });
+});
 
-frappe.ui.form.on("Ucenec", {
+frappe.ui.form.on("Ucenci", {
     izberi_rfid(frm) {
         const ucenec = frm.doc.name;
         console.log(ucenec);

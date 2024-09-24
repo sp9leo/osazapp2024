@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class Ucenec(Document):
+class Ucenci(Document):
 	def before_save(self):
 		self.full_name = f"{self.ime} {self.priimek}"
 
