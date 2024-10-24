@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2024-07-28 11:58:33.272187",
  "doctype": "DocType",
@@ -143,7 +144,7 @@
    "link_fieldname": "ucenec"
   }
  ],
- "modified": "2024-09-24 09:52:50.538329",
+ "modified": "2024-10-24 09:16:45.303810",
  "modified_by": "Administrator",
  "module": "Prehrana",
  "name": "Ucenci",
