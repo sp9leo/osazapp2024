@@ -35,16 +35,16 @@
   },
   {
    "fieldname": "razred",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Razred",
-   "reqd": 1,
-   "unique": 1
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-24 09:38:14.060379",
+ "modified": "2024-10-24 20:04:03.849580",
  "modified_by": "Administrator",
  "module": "Prehrana",
  "name": "Oddelek",
