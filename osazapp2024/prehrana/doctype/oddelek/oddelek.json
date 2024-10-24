@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:{razred}{oddelek}",
  "creation": "2024-07-28 12:04:17.463432",
@@ -43,7 +44,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-15 15:57:20.670208",
+ "modified": "2024-10-24 09:38:14.060379",
  "modified_by": "Administrator",
  "module": "Prehrana",
  "name": "Oddelek",
