@@ -1,0 +1,272 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.668864",
+  "name": "1A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "1",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.718570",
+  "name": "2A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "2",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.740770",
+  "name": "3A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "3",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.762319",
+  "name": "4A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "4",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.784570",
+  "name": "5A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "5",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.807287",
+  "name": "6A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "6",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.829384",
+  "name": "7A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "7",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.854635",
+  "name": "8A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "8",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 11:31:00.876965",
+  "name": "9A",
+  "next_oddelek": null,
+  "oddelek": "A",
+  "razred": "9",
+  "school_year": "2024/2025"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:20:58.649767",
+  "name": "1B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "1",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:21:06.208485",
+  "name": "2B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "2",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:21:10.671023",
+  "name": "3B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "3",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:21:15.064815",
+  "name": "4B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "4",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:21:19.790631",
+  "name": "5B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "5",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:21:24.388654",
+  "name": "6B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "6",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:21:29.857807",
+  "name": "7B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "7",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:21:35.186736",
+  "name": "8B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "8",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:21:40.720852",
+  "name": "9B",
+  "next_oddelek": null,
+  "oddelek": "B",
+  "razred": "9",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:00.053915",
+  "name": "1OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "1",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:05.456656",
+  "name": "2OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "2",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:10.466073",
+  "name": "3OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "3",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:18.348756",
+  "name": "4OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "4",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:23.308707",
+  "name": "5OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "5",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:29.942379",
+  "name": "6OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "6",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:35.315787",
+  "name": "7OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "7",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:40.631935",
+  "name": "8OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "8",
+  "school_year": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Oddelek",
+  "modified": "2024-10-24 19:22:47.033372",
+  "name": "9OPP",
+  "next_oddelek": null,
+  "oddelek": "OPP",
+  "razred": "9",
+  "school_year": null
+ }
+]

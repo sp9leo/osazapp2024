@@ -9,11 +9,14 @@ app_license = "mit"
 # Includes in <head>
 # ------------------
 fixtures = [
-    {"dt": "Workspace", "filters": [["name", "in", ["Prehrana_workspace-Administrator"]]]},
+    {"doctype": "Workspace", "filters": [["name", "in", ["Prehrana_workspace-Administrator"]]]},
      "Role Profile",
     {
         "doctype": "Role", "filters": [["name", "in", ["Starsi", "Prehrana"]]
         ]
+    },
+    {
+        "doctype": "Oddelek"
     }
 ]
 
