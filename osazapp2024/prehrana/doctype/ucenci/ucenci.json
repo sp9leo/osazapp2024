@@ -132,7 +132,7 @@
  "links": [
   {
    "link_doctype": "Prehrana",
-   "link_fieldname": "ucenec_id",
+   "link_fieldname": "ucenec",
    "table_fieldname": "table_prehrana"
   },
   {
@@ -144,7 +144,7 @@
    "link_fieldname": "ucenec"
   }
  ],
- "modified": "2024-10-24 09:16:45.303810",
+ "modified": "2024-10-24 17:31:51.603120",
  "modified_by": "Administrator",
  "module": "Prehrana",
  "name": "Ucenci",
