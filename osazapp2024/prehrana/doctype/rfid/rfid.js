@@ -24,6 +24,8 @@ frappe.ui.form.on('RFID', {
                 if (r && r.name) {
                     // Set the fetched name to the link_ucenec field
                     frm.set_value('link_ucenec', r.name);
+                    frm.set_value('status', 'Aktiven');
+                    frm.save();
                     frappe.show_alert('link_ucenec field updated successfully');
                 } else {
                     frappe.show_alert('No Ucenci document found with the matching RFID');
