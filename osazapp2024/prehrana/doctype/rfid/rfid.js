@@ -3,7 +3,7 @@
 
 
 // frappe.ui.form.on("RFID", {
-//         validate(frm) {
+//     validate(frm) {
 //         status_change = doc.has_value_changed("status");
 //         if status_change:
 //         console.log("status"+status_change);
@@ -13,31 +13,63 @@
 //                             }
 //                 }
 //     });
-
 frappe.ui.form.on('RFID', {
     before_save: function(frm) {
         // Check if the link field is empty
-        const ucenec=frm.doc.link_ucenec
-        console.log(ucenec)
+        const ucenec = frm.doc.link_ucenec;
+        console.log(ucenec);
+        
         if (!frm.doc.link_ucenec) {
-            // Call the server-side function to update the related field
-            frappe.call({
-                method: 'frappe.client.set_value',
-                args: {
-                    doctype: 'Ucenci',
-                    name: ucenec,
-                    fieldname: 'rfid',
-                    value: null
-                },
-                callback: function(response) {
-                    if (!response.exc) {
-                        frappe.show_alert('Related field updated successfully');
-                    }
+            // Fetch the value from the linked doctype
+            frappe.db.get_value('Ucenci', ucenec, 'rfid', (r) => {
+                if (r && r.rfid) {
+                    // Update the related field with the fetched value
+                    frappe.call({
+                        method: 'frappe.client.set_value',
+                        args: {
+                            doctype: 'Ucenci',
+                            name: ucenec,
+                            fieldname: 'rfid',
+                            value: r.rfid
+                        },
+                        callback: function(response) {
+                            if (!response.exc) {
+                                frappe.show_alert('Related field updated successfully');
+                            }
+                        }
+                    });
+                } else {
+                    frappe.show_alert('No RFID value found for the linked Ucenci');
                 }
             });
         }
     }
 });
+
+// frappe.ui.form.on('RFID', {
+//     before_save: function(frm) {
+//         // Check if the link field is empty
+//         const ucenec=frm.doc.link_ucenec
+//         console.log(ucenec)
+//         if (!frm.doc.link_ucenec) {
+//             // Call the server-side function to update the related field
+//             frappe.call({
+//                 method: 'frappe.client.set_value',
+//                 args: {
+//                     doctype: 'Ucenci',
+//                     name: ucenec,
+//                     fieldname: 'rfid',
+//                     value: null
+//                 },
+//                 callback: function(response) {
+//                     if (!response.exc) {
+//                         frappe.show_alert('Related field updated successfully');
+//                     }
+//                 }
+//             });
+//         }
+//     }
+// });
 
 
 
