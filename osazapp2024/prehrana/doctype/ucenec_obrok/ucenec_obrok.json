@@ -23,7 +23,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Obrok ID",
-   "options": "Prehrana"
+   "options": "Obroki"
   },
   {
    "fieldname": "solsko_leto",
@@ -35,7 +35,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-09-15 15:57:57.982745",
+ "modified": "2024-11-09 13:06:42.797791",
  "modified_by": "Administrator",
  "module": "Prehrana",
  "name": "Ucenec obrok",
