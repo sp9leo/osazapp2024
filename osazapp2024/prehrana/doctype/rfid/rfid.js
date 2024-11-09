@@ -11,11 +11,12 @@ frappe.ui.form.on("RFID", {
           // Set the fetched name to the link_ucenec field
           frm.set_value("link_ucenec", r.name);
           frm.set_value("status", "Aktiven");
-          frm.set_df_property("status", "read_only", 1);
+          // frm.set_df_property("status", "read_only", 1);
           frm.save();
           frappe.show_alert("Ucenec field updated successfully");
         } else {
           frappe.show_alert("No Ucenci document found with the matching RFID");
+          // frm.set_value("status", "Pripravljen");
         }
       });
     }
@@ -27,6 +28,9 @@ frappe.ui.form.on("RFID", {
       // Set the status field to read-only
       frm.set_df_property("status", "read_only", 1);
     }
+    else if(!frm.doc.link_ucenec && frm.doc.status === "Aktiven"){
+      frappe.throw("Status ne more biti Aktiven če nima dodanega učenca", { title: "Napaka" });
+    }
   }
 });
 
@@ -35,8 +39,7 @@ frappe.ui.form.on("RFID", {
     const ucenec = frm.doc.link_ucenec;
     var rfid = frm.doc.name;
     console.log(ucenec);
-    frappe.db
-      .get_value("Ucenci", { name: ucenec }, ["ime", "priimek"])
+    frappe.db.get_value("Ucenci", { name: ucenec }, ["ime", "priimek"])
       .then(r => {
         let values = r.message;
         console.log(values.ime, values.priimek);
