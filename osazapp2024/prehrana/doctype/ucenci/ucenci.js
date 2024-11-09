@@ -82,36 +82,34 @@ frappe.ui.form.on('Ucenci', {
               { 
                 name: 'Name', 
                 id: 'name', 
-                format: value => `<a class="text-primary" href="/app/obroki/${value}" target="_blank">${value}</a>`,
-                width: 2, // Adjust width ratio if needed
-                editable:false
+                format: value => `<a class="text-primary" href="/app/prehrana/${value}" target="_blank">${value}</a>`,
+                width: 1, // Adjust width ratio if needed
+                editable: false
               },
               { 
                 name: 'Storitev', 
                 id: 'storitev',
-                width: 2, // Adjust width ratio if needed
-                editable:false
+                width: 1, // Adjust width ratio if needed
+                editable: false
               },
               { 
                 name: 'Status', 
                 id: 'status',
-                width: 2, // Adjust width ratio if needed
-                editable:false
+                width: 1, // Adjust width ratio if needed
+                editable: false
               },
               { 
                 name: 'Datum', 
                 id: 'datum',
-                width: 2, // Adjust width ratio if needed
-                editable:false
+                width: 1, // Adjust width ratio if needed
+                editable: false
               }
-             
             ],
             data: r.message,
-            
-            layout: 'fluid', // Adjusts column width based on container width
+            layout: 'ratio', // Adjusts column width based on ratio
             inlineFilters: true, // Enables inline filters
             serialNoColumn: true, // Adds a serial number column
-            dynamicRowHeight: false, // Adjusts row height based on content
+            dynamicRowHeight: true, // Adjusts row height based on content
             noDataMessage: "No related records found", // Custom message when no data is available
             checkboxColumn: false, // Adds a checkbox column for row selection
             // headerDropdown: [
@@ -128,3 +126,4 @@ frappe.ui.form.on('Ucenci', {
     });
   }
 });
+

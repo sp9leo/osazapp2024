@@ -1,7 +1,7 @@
 [
  {
   "charts": [],
-  "content": "[{\"id\":\"WpPdyhq1fN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Prehrana_workspace</span>\",\"col\":12}},{\"id\":\"99jRqggWZ4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Učenci\",\"col\":3}},{\"id\":\"YKmoOzJj4t\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Prehrana\",\"col\":3}},{\"id\":\"gm8HzzRRn0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"RFID\",\"col\":3}}]",
+  "content": "[{\"id\":\"WpPdyhq1fN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Prehrana_workspace</span>\",\"col\":12}},{\"id\":\"99jRqggWZ4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Učenci\",\"col\":3}},{\"id\":\"YKmoOzJj4t\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Prehrana\",\"col\":3}},{\"id\":\"gm8HzzRRn0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"RFID\",\"col\":3}},{\"id\":\"qZFpfN8svz\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"whq8hxuAYx\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Zajtrk\",\"col\":5}},{\"id\":\"flLHXLOWvR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Kosilo\",\"col\":5}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -12,10 +12,25 @@
   "is_hidden": 0,
   "label": "Prehrana_workspace-Administrator",
   "links": [],
-  "modified": "2024-09-24 11:10:04.723789",
+  "modified": "2024-11-09 17:08:20.057055",
   "module": "Prehrana",
   "name": "Prehrana_workspace-Administrator",
-  "number_cards": [],
+  "number_cards": [
+   {
+    "label": "Zajtrk",
+    "number_card_name": "Obroki danes",
+    "parent": "Prehrana_workspace-Administrator",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Kosilo",
+    "number_card_name": "Kosilo",
+    "parent": "Prehrana_workspace-Administrator",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   }
+  ],
   "parent_page": "",
   "public": 0,
   "quick_lists": [],
@@ -42,11 +57,11 @@
    {
     "color": "Grey",
     "doc_view": "List",
-    "format": null,
+    "format": "{}",
     "icon": null,
     "kanban_board": null,
     "label": "Prehrana",
-    "link_to": "Prehrana",
+    "link_to": "Obroki",
     "parent": "Prehrana_workspace-Administrator",
     "parentfield": "shortcuts",
     "parenttype": "Workspace",
