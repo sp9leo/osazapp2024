@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
+ "autoname": "hash",
  "creation": "2024-07-28 11:58:33.272187",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -22,7 +22,9 @@
   "kosilo",
   "column_break_zzoc",
   "vozac",
-  "dieta"
+  "dieta",
+  "prehrana_tab",
+  "related_prehrana_list"
  ],
  "fields": [
   {
@@ -38,6 +40,7 @@
   {
    "fieldname": "oddelek",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Oddelek",
    "options": "Oddelek"
   },
@@ -101,6 +104,7 @@
   {
    "fieldname": "rfid",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "RFID",
    "options": "RFID",
    "read_only": 1,
@@ -127,6 +131,15 @@
    "no_copy": 1,
    "permlevel": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "prehrana_tab",
+   "fieldtype": "Tab Break",
+   "label": "Prehrana"
+  },
+  {
+   "fieldname": "related_prehrana_list",
+   "fieldtype": "HTML"
   }
  ],
  "links": [
@@ -144,11 +157,11 @@
    "link_fieldname": "ucenec"
   }
  ],
- "modified": "2024-10-24 17:31:51.603120",
+ "modified": "2024-11-09 12:59:05.751915",
  "modified_by": "Administrator",
  "module": "Prehrana",
  "name": "Ucenci",
- "naming_rule": "By script",
+ "naming_rule": "Random",
  "owner": "Administrator",
  "permissions": [
   {

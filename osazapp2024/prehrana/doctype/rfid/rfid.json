@@ -8,9 +8,9 @@
   "uuid",
   "status",
   "column_break_exrv",
+  "oddelek",
   "link_ucenec",
-  "izbrisi_rfid",
-  "oddelek"
+  "izbrisi_rfid"
  ],
  "fields": [
   {
@@ -65,7 +65,7 @@
    "link_fieldname": "rfid"
   }
  ],
- "modified": "2024-11-09 11:09:23.846092",
+ "modified": "2024-11-09 12:45:03.243394",
  "modified_by": "Administrator",
  "module": "Prehrana",
  "name": "RFID",

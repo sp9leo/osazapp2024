@@ -34,6 +34,7 @@ frappe.ui.form.on("Ucenci", {
             console.log(ucenec);
             doc.status = "Aktiven";
             doc.link_ucenec = ucenec;
+            frm.save();
 
             // Use frappe.call to update the document
             frappe.call({
@@ -65,3 +66,65 @@ frappe.ui.form.on("Ucenci", {
   }
 });
 
+frappe.ui.form.on('Ucenci', {
+  refresh: function(frm) {
+    // Call the server-side method to fetch data
+    frappe.call({
+      method: 'osazapp2024.prehrana.doctype.ucenci.ucenci.get_prehrana_data',
+      args: {
+        docname: frm.doc.name
+      },
+      callback: function(r) {
+        if (r.message) {
+          // Initialize the datatable
+          let datatable = new DataTable(frm.fields_dict['related_prehrana_list'].wrapper, {
+            columns: [
+              { 
+                name: 'Name', 
+                id: 'name', 
+                format: value => `<a class="text-primary" href="/app/obroki/${value}" target="_blank">${value}</a>`,
+                width: 2, // Adjust width ratio if needed
+                editable:false
+              },
+              { 
+                name: 'Storitev', 
+                id: 'storitev',
+                width: 2, // Adjust width ratio if needed
+                editable:false
+              },
+              { 
+                name: 'Status', 
+                id: 'status',
+                width: 2, // Adjust width ratio if needed
+                editable:false
+              },
+              { 
+                name: 'Datum', 
+                id: 'datum',
+                width: 2, // Adjust width ratio if needed
+                editable:false
+              }
+             
+            ],
+            data: r.message,
+            
+            layout: 'fluid', // Adjusts column width based on container width
+            inlineFilters: true, // Enables inline filters
+            serialNoColumn: true, // Adds a serial number column
+            dynamicRowHeight: false, // Adjusts row height based on content
+            noDataMessage: "No related records found", // Custom message when no data is available
+            checkboxColumn: false, // Adds a checkbox column for row selection
+            // headerDropdown: [
+            //   {
+            //     label: 'Export',
+            //     action: function() {
+            //       datatable.exportCSV();
+            //     }
+            //   }
+            // ] // Adds a custom dropdown action in the header
+          });
+        }
+      }
+    });
+  }
+});

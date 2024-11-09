@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("RFID", {
-  before_save: function(frm) {
+  refresh: function(frm) {
     // Check if the link field is empty
     if (!frm.doc.link_ucenec) {
       // Fetch the document from Ucenci where rfid matches
@@ -22,7 +22,7 @@ frappe.ui.form.on("RFID", {
     }
   },
 
-  validate: function(frm) {
+  refresh: function(frm) {
     // Check if link_ucenec exists and status is "Aktiven"
     if (frm.doc.link_ucenec && frm.doc.status === "Aktiven") {
       // Set the status field to read-only
@@ -79,5 +79,18 @@ frappe.ui.form.on("RFID", {
           // }
         );
       });
+  }
+});
+
+frappe.ui.form.on('RFID', {
+  refresh: function(frm) {
+    // Ensure the button is rendered before applying styles
+    frm.fields_dict['izbrisi_rfid'].$wrapper.find('button').html('<i class="fa fa-trash"></i> Odstrani RFID ucencu');
+
+    // Optionally, you can also style the button
+    frm.fields_dict['izbrisi_rfid'].$wrapper.find('button').css({
+      'background-color': 'var(--danger)', // Red color
+      'color': '#ffffff' // White text
+    });
   }
 });
