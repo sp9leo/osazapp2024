@@ -1,0 +1,20 @@
+import json
+import frappe
+from frappe.desk.doctype.event.event import Event
+from frappe.website.website_generator import WebsiteGenerator
+
+
+
+class Myevent(Event):
+    def validate(self):
+        self.route = self.name
+        if self.event_category == "Dogodek":
+            self.color = "#4463F0"
+        elif self.event_category == "Dnevi dejavnosti":
+            self.color = "#ECAD4B"
+
+        
+
+        print("\n\n\n Student Values are being validated! \n\n\n")
+
+

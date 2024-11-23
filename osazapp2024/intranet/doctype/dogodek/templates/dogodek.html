@@ -1,0 +1,61 @@
+{% extends "templates/myweb.html" %}
+
+{% block page_content %}
+
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+           <div class="card">
+            <div class="card-header">
+                <div class="row align-items-start">
+                    <div class="col-sm-4">
+                        <h4>{{ subject }}</h4>
+                        {%if status=="Open" %}
+                        <h5><span class="badge badge-danger ">{{status}} </span></h5>
+                        {%elif status =="Completed"%}
+                        <h5> <span class="badge badge-secondary ">{{status}} </span></h5>
+                        {%endif%}
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4 d-flex justify-content-end" >
+                        
+
+                            <div class="grid gap-0 row-gap-1">
+                                <div class="p-0 g-col-6"><i class="bi bi-calendar"></i> {{frappe.utils.formatdate(starts_on,"dd-MM")}}</div>
+                                {%if all_day%}
+                                <div class="p-0 g-col-6"><i class="bi bi-clock"></i> cel dan</div>
+                                {%else%}
+                                <div class="p-0 g-col-6"><i class="bi bi-clock"></i><b>{{frappe.utils.format_time(starts_on,"HH:mm")}}-{{frappe.utils.format_time(ends_on,"HH:mm")}}</b> </div>
+                                
+                              {%endif%}
+                                {%if location%}
+                                <div class="p-0 g-col-6"><i class="bi bi-building-fill"></i> {{location}}</div>
+                                {%else%}
+                                <div class="p-0 g-col-6"><i class="bi bi-house-heart"></i> Na šoli</div>
+                                {%endif%}
+                                <div class="p-0 g-col-6"><i class="bi bi-card-text" style="color: {{color}};"></i> {{event_category}}</div>
+                                
+                              </div>
+
+                        
+                       
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="card-body">
+
+
+                <p class="card-text">{{ description }}</p>
+
+            </div>
+            <div class="card-footer" style="font-size: 10pt;">
+                <small>{{title}}<br>
+                    <i class="bi-pencil-fill">{{frappe.utils.formatdate(creation, "dd-MM-yyyy")}}</i></small>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+    <div></div>
+    {% endblock %}

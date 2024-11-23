@@ -1,0 +1,58 @@
+{% extends "templates/myweb.html" %}
+
+{% block page_content %}
+
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="row align-items-start">
+                    <div class="col-sm-4">
+                        <h2>{{ subject }}</h2>
+                        {%if status=="Open" %}
+                        <h5><span class="badge badge-danger ">{{status}} </span></h5>
+                        {%elif status =="Completed"%}
+                        <h5> <span class="badge badge-secondary ">{{status}} </span></h5>
+                        {%endif%}
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4 d-flex justify-content-end" style="font-size:small">
+                        <div class="card border-0 bg-body">
+
+                            <ul class="list-group bg-body" >
+                                <li class="list-group-item  ">
+                                    <h6><i class="bi-calendar"> {{frappe.utils.formatdate(starts_on, "dd-MM-yyyy")}}</i></h6>
+                                </li>
+                                <li class="list-group-item ">
+                                    <h6><i class="bi-clock">{{frappe.utils.format_time(starts_on, "hh:mm")}}</i></h6>
+                                </li>
+                                <li class="list-group-item"><i class="bi-building-fill"></i> {{location}}</li>
+    
+                                <li class="list-group-item"><i class="bi-card-text" style="text-color: {{color}}"></i>
+                                    {{event_category}}</li>
+    
+                            </ul>
+
+                        </div>
+                       
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="card-body">
+
+
+                <p class="card-text">{{ description }}</p>
+
+            </div>
+            <div class="card-footer" style="font-size: 10pt;">
+                <small>{{title}}<br>
+                    <i class="bi-pencil-fill">{{frappe.utils.formatdate(creation, "dd-MM-yyyy")}}</i></small>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+    <div></div>
+    {% endblock %}
