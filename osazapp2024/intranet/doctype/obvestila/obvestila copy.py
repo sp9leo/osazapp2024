@@ -4,14 +4,14 @@
 import frappe
 from frappe.model.document import Document
 from frappe.website.website_generator import WebsiteGenerator
-# from frappe.utils import today, now, add_days, getdate, nowdate
+from frappe.utils import today, now, add_days, getdate, nowdate
 
 
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 # License: MIT. See LICENSE
 
 
-class Obvestila(WebsiteGenerator):
+class Obvestila(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 

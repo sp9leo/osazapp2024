@@ -79,9 +79,9 @@
   },
   {
    "fieldname": "event_category",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Event Category",
-   "options": "Dogodek\nDnevi dejavnosti\n\u0160ola v naravi\nTekmovanje\nEvent\nMeeting\nCall\nSent/Received Email\nOther"
+   "options": "Event Type"
   },
   {
    "description": "Private - Dogodki vidni samo prijavljenim uporabnikom\n<br>\nPublic - Dogodki vidni VSEM uporabnikom",
@@ -97,6 +97,7 @@
    "search_index": 1
   },
   {
+   "fetch_from": "event_category.barva",
    "fieldname": "color",
    "fieldtype": "Color",
    "label": "Color"
@@ -326,7 +327,7 @@
  "is_calendar_and_gantt": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2024-05-06 15:01:27.047941",
+ "modified": "2024-11-25 08:27:31.485228",
  "modified_by": "Administrator",
  "module": "Intranet",
  "name": "Dogodek",
