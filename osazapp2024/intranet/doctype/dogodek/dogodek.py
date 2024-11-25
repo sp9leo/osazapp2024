@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+from frappe.model.document import Document
 from frappe.website.website_generator import WebsiteGenerator
 from frappe.utils import today, now, add_days, getdate, nowdate
 
@@ -12,7 +13,7 @@ from frappe.utils import today, now, add_days, getdate, nowdate
 # 		pass
 
 
-class Dogodek(WebsiteGenerator):
+class Dogodek(Document):
     
     def validate(self):
         
